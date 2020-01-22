@@ -8,6 +8,7 @@ public class Main {
         isPlainTriangle();
         isEquilateralTriangle();
         isIsoscelesTriangle();
+        isRectangularTriangle();
     }
 
     private static void isPlainTriangle(){
@@ -64,5 +65,24 @@ public class Main {
 
         System.out.println("Pole tego trójkąta, to: " + isoscelesTriangle.calculateField() + "!");
         System.out.println("Obwód tego trójkąta, to: " + isoscelesTriangle.calculateTheCircumference() + "!");
+    }
+
+    private static void isRectangularTriangle(){
+        System.out.println("Teraz policzymy obwód i pole trójkąta prostokątnego. ");
+
+        Scanner scanner = new Scanner(System.in);
+        scanner.useLocale(Locale.US);
+
+        System.out.println("Podaj długość pierwszej przyprostokątnej trójkąta prostokątnego: ");
+        double firstSideOfTheSide1 = scanner.nextDouble();
+        System.out.println("Podaj długość drugiej przyprostokątnej trójkąta prostokątnego: ");
+        double secondSideOfTheSide1 = scanner.nextDouble();
+        System.out.println("Podaj długość ramienia trójkąta równoramiennego: ");
+        double side1 = Math.sqrt(firstSideOfTheSide1 * firstSideOfTheSide1 + secondSideOfTheSide1 * secondSideOfTheSide1);
+
+        RectangularTriangle rectangularTriangle = new RectangularTriangle(firstSideOfTheSide1, secondSideOfTheSide1, side1);
+
+        System.out.println("Pole tego trójkąta, to: " + rectangularTriangle.calculateField() + "!");
+        System.out.println("Obwód tego trójkąta, to: " + rectangularTriangle.calculateTheCircumference() + "!");
     }
 }
