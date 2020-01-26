@@ -1,12 +1,12 @@
 public class RectangularTriangle extends PlainTriangle{
-    private double firstSideOfTheSide;
-    private double secondSideOfTheSide;
-    private double side;
+        private double firstSide;
+        private double secondSide;
+        private double thirdSide;
 
-    public RectangularTriangle(double firstSideOfTheSide, double secondSideOfTheSide, double side) {
-        super(firstSideOfTheSide, secondSideOfTheSide, secondSideOfTheSide, side);
-        this.firstSideOfTheSide = firstSideOfTheSide;
-        this.secondSideOfTheSide = secondSideOfTheSide;
-        this.side = side;
+    public RectangularTriangle(double firstSide, double secondSide, double thirdSide) {
+        super(firstSide, secondSide, thirdSide);
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
+        this.thirdSide = thirdSide;
     }
 }
