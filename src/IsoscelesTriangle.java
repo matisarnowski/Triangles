@@ -1,15 +1,13 @@
 public class IsoscelesTriangle extends EquilateralTriangle{
     private double side;
-    private double height ;
 
-    public IsoscelesTriangle(double height, double side) {
-        super(side, height, side);
+    public IsoscelesTriangle(double side) {
+        super(side, side);
         this.side = side;
-        this.height = height;
     }
 
     @Override
-    public double calculateField() {
-        return side * side * Math.sqrt(3.0) * 0.25;
+    public void calculateField() {
+        System.out.println("Pole wynosi: " + side * side * Math.sqrt(3.0) * 0.25);
     }
 }
