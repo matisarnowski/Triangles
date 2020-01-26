@@ -9,6 +9,8 @@ public class Main {
         isEquilateralTriangle();
         isIsoscelesTriangle();
         isRectangularTriangle();
+
+        System.out.println("The End!!!");
     }
 
     private static void isPlainTriangle(){
