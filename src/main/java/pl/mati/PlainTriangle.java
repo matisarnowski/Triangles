@@ -1,5 +1,3 @@
-import org.w3c.dom.ls.LSOutput;
-
 public class PlainTriangle {
     private double basis;
     private double height;
@@ -10,7 +8,7 @@ public class PlainTriangle {
         this.basis = basis;
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-        setHeight(calculateHeight());
+        setHeight();
     }
 
     public void calculateTheCircumference(){
@@ -43,11 +41,10 @@ public class PlainTriangle {
 
     public double calculateHeight(){
         double p = 0.5 * (basis + firstSide + secondSide);
-        this.height = 2.0 * (Math.sqrt(p*(p - basis)*(p - firstSide)*(p - secondSide)) / basis);
-        return this.height;
+        return 2.0 * (Math.sqrt(p*(p - basis)*(p - firstSide)*(p - secondSide)) / basis);
     }
 
-    public void setHeight(double height) {
-        this.height = height;
+    public void setHeight() {
+        this.height = calculateHeight();
     }
 }
