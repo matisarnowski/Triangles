@@ -1,3 +1,5 @@
+package pl.mati;
+
 public class PlainTriangle {
     private double basis;
     private double height;
@@ -27,16 +29,10 @@ public class PlainTriangle {
     }
 
     public boolean isTrue(){
-        if (basis + firstSide > secondSide){
+        if ((basis + firstSide > secondSide) && (basis < firstSide + secondSide) && (basis + secondSide > firstSide)){
             return true;
         }
-        else if(basis < firstSide + secondSide){
-            return true;
-        }
-        else if(basis + secondSide > firstSide){
-            return true;
-        }
-        else return false;
+        return false;
     }
 
     public double calculateHeight(){

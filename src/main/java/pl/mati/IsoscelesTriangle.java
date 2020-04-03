@@ -1,3 +1,5 @@
+package pl.mati;
+
 public class IsoscelesTriangle extends EquilateralTriangle{
     private double side;
 

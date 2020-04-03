@@ -1,3 +1,5 @@
+package pl.mati;
+
 public class EquilateralTriangle extends PlainTriangle{
     private double side;
 

@@ -1,3 +1,5 @@
+package pl.mati;
+
 public class RectangularTriangle extends PlainTriangle{
         private double firstSide;
         private double secondSide;
